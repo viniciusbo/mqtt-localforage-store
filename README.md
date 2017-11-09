@@ -6,7 +6,7 @@
 
 ```sh
 yarn add mqtt-localforage-store localforage
-// or
+# or
 npm install --save mqtt-localforage-store
 ```
 
@@ -14,7 +14,7 @@ npm install --save mqtt-localforage-store
 
 ```sh
 git clone git@github.com:viniciusbo/mqtt-localforage-store.git && cd mqtt-localforage-store
-yarn // or npm install
+yarn # or npm install
 npm run build
 cd /dist
 ```
@@ -44,6 +44,6 @@ mqtt.connect({
 ## Test
 
 ```sh
-yarn // or npm install
+yarn # or npm install
 npm run test
 ```
