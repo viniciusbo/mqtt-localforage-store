@@ -1,0 +1,43 @@
+{
+  "name": "mqtt-localforage-store",
+  "version": "0.1.0",
+  "description": "MQTT.js store for the browser using localForage",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --recursive test",
+    "build": "rm -rf dist/ && webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/viniciusbo/mqtt-localforage-store.git"
+  },
+  "keywords": [
+    "mqtt",
+    "store",
+    "localforage",
+    "browser",
+    "javascript",
+    "js"
+  ],
+  "author": "Vinícius Borriello",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/viniciusbo/mqtt-localforage-store/issues"
+  },
+  "homepage": "https://github.com/viniciusbo/mqtt-localforage-store#readme",
+  "dependencies": {
+    "readable-stream": "^2.3.3"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "jsdom": "^11.3.0",
+    "jsdom-global": "^3.0.2",
+    "localforage": "^1.5.3",
+    "localforage-memoryStorageDriver": "^0.9.2",
+    "mocha": "^4.0.1",
+    "uglifyjs-webpack-plugin": "^1.0.1",
+    "webpack": "^3.8.1"
+  }
+}
