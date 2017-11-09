@@ -36,8 +36,8 @@ const outgoingStore = MQTTLocalForageStore(outgoingDb);
 
 mqtt.connect({
   // ...
-  incomingMQTTStore,
-  outgoingMQTTStore,
+  incomingStore,
+  outgoingStore,
 });
 ```
 
