@@ -7,7 +7,9 @@ module.exports = [
 
     output: {
       filename: 'mqtt-localforage-store.min.js',
-      path: path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'dist'),
+      library: 'MQTTLocalForageStore',
+      libraryTarget: 'var'
     },
 
     plugins: [
@@ -37,7 +39,9 @@ module.exports = [
 
     output: {
       filename: 'mqtt-localforage-store.standalone.min.js',
-      path: path.resolve(__dirname, 'dist')
+      path: path.resolve(__dirname, 'dist'),
+      library: 'MQTTLocalForageStore',
+      libraryTarget: 'var'
     },
 
     externals: ['readable-stream'],
