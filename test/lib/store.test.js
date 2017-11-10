@@ -100,7 +100,8 @@ describe('MQTT.js localForage Store', () => {
     };
 
     store.put(packet, () => {
-      store.createStream().on('close', done());
+      const stream = store.createStream();
+      stream.on('close', done);
       stream.destroy();
     });
   });
