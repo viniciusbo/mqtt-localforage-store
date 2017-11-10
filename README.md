@@ -1,5 +1,7 @@
 # MQTT.js localForage Store for the browser
 
+[![Build Status](https://api.travis-ci.org/viniciusbo/mqtt-localforage-store.svg?branch=master)](https://travis-ci.org/viniciusbo/mqtt-localforage-store)
+
 ## Installation
 
 ### NPM
