@@ -1,6 +1,6 @@
 {
   "name": "mqtt-localforage-store",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "MQTT.js store for the browser using localForage",
   "main": "index.js",
   "scripts": {
