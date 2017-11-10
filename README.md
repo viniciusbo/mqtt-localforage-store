@@ -19,13 +19,13 @@ npm run build
 cd /dist
 ```
 
-Distribution bundles are located in `/dist` folder.
+Distribution bundles are located in `/dist` folder. The build exposes the `MQTTLocalForageStore` globally.
 
 ## Usage
 
 ```javascript
 import localForage from 'localforage';
-import MQTTLocalForageStore from 'mqtt-localforage-store';
+import Store as MQTTLocalForageStore from 'mqtt-localforage-store';
 
 // Make your own localForage instances
 const incomingDb = localForage.createInstance({ name: 'incomingPackets' });
