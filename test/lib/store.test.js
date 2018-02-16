@@ -84,11 +84,14 @@ describe('MQTT.js localForage Store', () => {
       store.put(packetB, () => {
         let i = 0;
 
-        store.createStream().on('data', (data) => {
-          assert.deepEqual(data, packets[i]);
-          
-          if (++i === 2) done();
-        });
+        const stream = store.createStream();
+        stream
+          .on('data', (data) => assert.deepEqual(data, packets[i++]))
+          .on('end', () => {
+            // i - 1 because on the last iteration i = package.length + 1 due to i++
+            assert.deepEqual(i - 1, packets.length - 1);
+            done();
+          });
       });
     });
   });
@@ -101,8 +104,9 @@ describe('MQTT.js localForage Store', () => {
 
     store.put(packet, () => {
       const stream = store.createStream();
-      stream.on('close', done);
-      stream.destroy();
+      stream
+        .on('data', (data) => stream.destroy())
+        .on('close', done);
     });
   });
 
